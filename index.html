@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipiscing">
+  <!-- <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <title>InSystem</title>
+</head>
+
+<body>
+  <div class="layout">
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a href="#" class="logo" aria-label="Логотип">
+            LoremIpsum.<span class="logo--modified">Net</span>
+          </a>
+
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#business" class="header__menu-link header__menu-link--active">Бизнес</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#about" class="header__menu-link">О нас</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#prices" class="header__menu-link">Цены</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#order" class="header__menu-link">Оформить заказ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="business" id="business">
+        <div class="container">
+          <h1 class="business__title title"><span class="title--modified">Lorem ipsum</span> dolor sit amet consectetur
+            <span class="title--modified">adipiscing</span></h1>
+          <p class="business__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+          <ul class="business__list">
+            <li class="business__list-item">Totam rem aperiam eaque ipsa</li>
+            <li class="business__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+            <li class="business__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+          <div class="business__buttons">
+            <a href="#order" class="btn btn--primary"><span>Заказать</span></a>
+            <a href="#about" class="btn"><span>Подробнее</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="order _lazy" id="order" data-bg="img/order-bg.png" data-bg-hidpi="img/order-bg@2x.png">
+        <div class="container">
+          <h2 class="order__title title">Оформление <span class="title--modified">Заказа</span></h2>
+          <p class="order__descr">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+          <ul class="order-steps">
+            <li class="order-steps__item">
+              <div class="order-steps__icon">
+                <svg width="55" height="55">
+                  <use xlink:href="img/sprites/sprite.svg#search"></use>
+                </svg>
+              </div>
+              <div class="order-steps__name">Lorem ipsum dolor sit amet</div>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon">
+                <svg width="55" height="55">
+                  <use xlink:href="img/sprites/sprite.svg#percent"></use>
+                </svg>
+              </div>
+              <div class="order-steps__name">Сonsecteturadipiscing elit</div>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon">
+                <svg width="55" height="55">
+                  <use xlink:href="img/sprites/sprite.svg#subtruct"></use>
+                </svg>
+              </div>
+              <div class="order-steps__name">Sed do eiusmod tempor</div>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon">
+                <svg width="55" height="55">
+                  <use xlink:href="img/sprites/sprite.svg#email"></use>
+                </svg>
+              </div>
+              <div class="order-steps__name">Esse cillum dolore eu fugiat</div>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon">
+                <svg width="55" height="55">
+                  <use xlink:href="img/sprites/sprite.svg#money"></use>
+                </svg>
+              </div>
+              <div class="order-steps__name">Excepteur sint occaecat cupidatat non proident</div>
+            </li>
+          </ul>
+
+          <form class="order__form" action="#" novalidate="" autocomplete="off" method="post">
+            <div class="select order__form-select">
+              <input id="select-type" class="select__input visually-hidden" type="text" name="select_type" required>
+              <label for="select-type" class="select__btn">Выберите тип системы</label>
+              <span class="select__error" aria-live="polite"></span>
+              <div class="select__options">
+                <div class="select__options-wrapper">
+                  <button class="select__options-item" data-value="option_1" type="button">Sed ut perspiciatis</button>
+                  <button class="select__options-item" data-value="option_2" type="button">Nemo enim ipsam</button>
+                  <button class="select__options-item" data-value="option_3" type="button">Et harum quidem</button>
+                  <button class="select__options-item" data-value="option_4" type="button">Temporibus autem</button>
+                  <button class="select__options-item" data-value="option_5" type="button">Itaque earum rerum</button>
+                  <button class="select__options-item" data-value="option_6" type="button">Sed ut perspiciatis</button>
+                  <button class="select__options-item" data-value="option_7" type="button">Nemo enim ipsam</button>
+                  <button class="select__options-item" data-value="option_8" type="button">Et harum quidem</button>
+                  <button class="select__options-item" data-value="option_9" type="button">Temporibus autem</button>
+                  <button class="select__options-item" data-value="option_10" type="button">Itaque earum rerum</button>
+                </div>
+              </div>
+            </div>
+            <div class="input">
+              <input class="input__field" type="email" placeholder="Ваш e-mail" name="email" required>
+              <span class="input__error" aria-live="polite"></span>
+            </div>
+            <div class="input">
+              <input class="input__field" type="text" placeholder="Ваше имя" name="name" maxlength="60" required>
+              <span class="input__error" aria-live="polite"></span>
+            </div>
+            <div class="range order__form-range">
+              <label for="range" class="range__info">
+                <span class="range__info-name">Sed ut perspiciatis, unde omnis iste natus</span>
+                <span class="range__info-value">75 %</span>
+              </label>
+              <input id="range" class="range__field" type="range" min="0" max="100" value="75" step="1" name="range">
+            </div>
+            <div class="input order__form-file">
+              <input id="input-file" type="file" class="visually-hidden" name="file">
+              <label for="input-file" class="input-file">
+                <svg width="17" height="20" class="input-file__icon">
+                  <use xlink:href="img/sprites/sprite-noattr.svg#copy"></use>
+                </svg>
+                <span>Прикрепить файл</span>
+              </label>
+              <span class="input-value"></span>
+            </div>
+            <button class="order__form-submit btn btn--primary" type="submit">
+              <span>Отправить</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__copy">&copy; 2018 <span>«LoremIpsum.net»</span> Все&nbsp;права&nbsp;защищены.</p>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <svg class="footer__link-icon" width="20" height="20">
+              <use xlink:href="img/sprites/sprite.svg#qiwi"></use>
+            </svg>
+            <span class="footer__link-name text-gray">Qiwi wallet</span>
+          </li>
+          <li class="footer__item">
+            <svg class="footer__link-icon" width="20" height="20">
+              <use xlink:href="img/sprites/sprite.svg#yandex-money"></use>
+            </svg>
+            <span class="footer__link-name text-gray">Yandex Money</span>
+          </li>
+          <li class="footer__item">
+            <svg class="footer__link-icon" width="20" height="20">
+              <use xlink:href="img/sprites/sprite.svg#web-money"></use>
+            </svg>
+            <span class="footer__link-name text-gray">Web Money</span>
+          </li>
+        </ul>
+
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="mailto:info@ipsum228.com" class="footer__link">
+              <svg class="footer__link-icon" width="20" height="20">
+                <use xlink:href="img/sprites/sprite.svg#mail"></use>
+              </svg>
+              <span class="footer__link-name text-white">info@ipsum228.com</span>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link" target="_blank">
+              <svg class="footer__link-icon" width="20" height="20">
+                <use xlink:href="img/sprites/sprite.svg#vkontakte"></use>
+              </svg>
+              <span class="footer__link-name text-white">Мы вконтакте</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <script src='js/main.min.js' type='module'></script>
+</body>
+
+</html>

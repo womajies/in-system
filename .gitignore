@@ -6,20 +6,23 @@
 # Node artifact files
 /node_modules
 /package-lock.json
-# /gulpfile.js
+/gulpfile.js
 
 # production
 /dist
 
 # gulp
 # /gulp
-/gulp/config/ftp.js
+# /gulp/config/ftp.js
 
 # Log files
 *.log
 
 # Package files
 *.jar
+
+# Package files
+*.zip
 
 # JetBrains IDE
 .idea/
