@@ -1,0 +1,326 @@
+.order {
+  padding: 120px 0 150px;
+  background-color: var(--color-dark-bg);
+  background-position: center;
+  background-repeat: repeat-y;
+
+  @media screen and (max-width: $mobileS__max) {
+    padding: 60px 0 75px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+
+    @media screen and (max-width: $mobileS__max) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__descr {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-descr-text);
+    margin-top: 30px;
+
+    @media screen and (max-width: $mobileS__max) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-gap: 40px 0;
+    gap: 40px 0;
+    margin-top: $space-big;
+
+    @media screen and (max-width: $tablet__max) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 80px 0;
+      gap: 80px 0;
+    }
+    @media screen and (max-width: $mobile__max) {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+
+      @media screen and (max-width: $mobile__max) {
+        &::after {
+          content: "";
+          position: absolute;
+          right: 50%;
+          bottom: calc(100% + 2px);
+          transform: translateX(50%) translateY(-35px) rotate(-90deg);
+          width: 70px;
+          height: 6px;
+          background-image: url("@img/dot.svg");
+          background-repeat: round;
+          background-position: bottom;
+        }
+
+        &:first-child::after {
+          display: none;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: calc(50% + 50px + 2px); // 50px half of circle and 2px space
+        top: 50px;
+        transform: translateY(-50%);
+        width: calc(
+          100% - 100px - 4px
+        ); // 100px of the entire circle and 4px space on both sides
+        height: 6px;
+        background-image: url("@img/dot.svg");
+        background-repeat: round;
+        background-position: right;
+
+        @media screen and (max-width: $mobile__max) {
+          display: none;
+        }
+      }
+
+      &:first-child::before {
+        display: none;
+      }
+
+      &:nth-child(4n + 1)::before {
+        @media screen and (max-width: $tablet__max) {
+          display: none;
+        }
+      }
+
+      &:nth-child(4) {
+        @media screen and (max-width: $tablet__max) {
+          grid-column: 1 / 2;
+          grid-row: 2;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(8) {
+        @media screen and (max-width: $tablet__max) {
+          grid-column: 1 / 2;
+          grid-row: 4;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(12) {
+        @media screen and (max-width: $tablet__max) {
+          grid-column: 1 / 2;
+          grid-row: 6;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(16) {
+        @media screen and (max-width: $tablet__max) {
+          grid-column: 1 / 2;
+          grid-row: 8;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: $mobile__max) {
+          grid-column: initial;
+          grid-row: initial;
+        }
+      }
+
+      &:nth-child(5n + 1):not(:first-child)::before {
+        display: none;
+        @media screen and (max-width: $tablet__max) {
+          display: initial;
+        }
+        @media screen and (max-width: $mobile__max) {
+          display: none;
+        }
+      }
+
+      &:nth-child(4n - 1) {
+        @media screen and (max-width: $tablet__max) {
+          &::after {
+            content: "";
+            position: absolute;
+            right: 50%;
+            bottom: calc(100% + 2px);
+            transform: translateX(50%) translateY(-35px) rotate(-90deg);
+            width: 70px;
+            height: 6px;
+            background-image: url("@img/dot.svg");
+            background-repeat: round;
+            background-position: bottom;
+          }
+        }
+        @media screen and (max-width: $mobile__max) {
+          grid-column: initial;
+          grid-row: initial;
+        }
+      }
+
+      &:nth-child(4n + 1):not(:first-child) {
+        @media screen and (max-width: $tablet__max) {
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            right: 50%;
+            bottom: calc(100% + 2px);
+            transform: translateX(50%) translateY(-35px) rotate(-90deg);
+            width: 70px;
+            height: 6px;
+            background-image: url("@img/dot.svg");
+            background-repeat: round;
+            background-position: bottom;
+          }
+        }
+      }
+
+      &:nth-child(6n + 1):not(:first-child).order-steps__item:last-child {
+        @media screen and (max-width: $tablet__max) {
+          grid-column: 2 / 2;
+          grid-row: 4;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: $mobile__max) {
+          grid-column: initial;
+          grid-row: initial;
+        }
+      }
+
+      &:last-child:not(:nth-child(2n))::before {
+        @media screen and (max-width: $tablet__max) {
+          display: none;
+        }
+      }
+    }
+
+    &__icon {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border: 5px solid #286690;
+      border-radius: 100%;
+      background-color: var(--color-one-accent);
+    }
+
+    &__name {
+      max-width: 188px;
+      text-align: center;
+      color: var(--color-white);
+      margin-top: 20px;
+      @extend %text;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    gap: 30px;
+    margin-top: $space-big;
+
+    @media screen and (max-width: $tablet__max) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: $mobile__max) {
+      grid-template-columns: 1fr;
+    }
+
+    &-select {
+      @media screen and (max-width: $tablet__max) {
+        grid-column-start: span 2;
+      }
+      @media screen and (max-width: $mobile__max) {
+        grid-column-start: initial;
+      }
+    }
+
+    &-range {
+      grid-column-start: span 2;
+
+      @media screen and (max-width: $tablet__max) {
+        grid-column-start: span 1;
+      }
+      @media screen and (max-width: $mobileS__max) {
+        grid-column-start: span 2;
+      }
+      @media screen and (max-width: $mobile__max) {
+        grid-column-start: initial;
+      }
+    }
+
+    &-file {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      @media screen and (max-width: $mobileS__max) {
+        grid-column-start: span 2;
+      }
+      @media screen and (max-width: $mobile__max) {
+        grid-column-start: initial;
+      }
+    }
+
+    &-submit {
+      grid-column-start: span 3;
+      width: calc(33.33333% - 20px);
+      margin: 25px auto 0;
+
+      @media screen and (max-width: $tablet__max) {
+        grid-column-start: span 2;
+        max-width: 370px;
+        width: 100%;
+      }
+      @media screen and (max-width: $mobileS__max) {
+        max-width: none;
+        margin-top: 0;
+      }
+      @media screen and (max-width: $mobile__max) {
+        grid-column-start: initial;
+      }
+    }
+  }
+}

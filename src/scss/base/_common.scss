@@ -1,0 +1,161 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body.modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.relative {
+  position: relative;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title {
+  & &--modified {
+    color: var(--color-one-accent);
+  }
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+%text {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+// call -   { @extend %text; }
+
+// Margin from 0 to 24px
+@for $i from 0 through 24 {
+  .m-#{4*$i} {
+    margin: 4px * $i !important;
+  }
+  .mt-#{4*$i} {
+    margin-top: 4px * $i !important;
+  }
+  .mb-#{4*$i} {
+    margin-bottom: 4px * $i !important;
+  }
+  .my-#{4*$i} {
+    margin-top: 4px * $i !important;
+    margin-bottom: 4px * $i !important;
+  }
+  .ml-#{4*$i} {
+    margin-left: 4px * $i !important;
+  }
+  .mr-#{4*$i} {
+    margin-right: 4px * $i !important;
+  }
+  .mx-#{4*$i} {
+    margin-right: 4px * $i !important;
+    margin-left: 4px * $i !important;
+  }
+}
+
+//margin alignment
+.m-auto {
+  margin: auto !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+
+//truncate
+.truncate-max-1-line {
+  @include text-truncate(100%, 1);
+}
+
+.truncate-max-2-lines {
+  @include text-truncate(100%, 2);
+}

@@ -1,0 +1,108 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  min-height: 80px;
+  background-color: var(--color-accent-bg);
+
+  &__container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 35px;
+    gap: 35px;
+
+    @media screen and (max-width: $tablet__max) {
+      align-items: center;
+      justify-content: center;
+      grid-auto-flow: initial;
+      grid-gap: 24px;
+      gap: 24px;
+    }
+  }
+
+  &__copy {
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color-white);
+
+    @media screen and (max-width: $tablet__max) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: $mobile__max) {
+      text-align: left;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 38px;
+    gap: 38px;
+    padding-left: 35px;
+
+    @media screen and (max-width: $tablet__max) {
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: $mobile__max) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      grid-gap: 24px;
+      gap: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 1px;
+      height: calc(100% - 2px);
+      background-color: var(--color-gray);
+
+      @media screen and (max-width: $tablet__max) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+
+    &:hover {
+      .footer__link-name {
+        color: var(--color-one-accent);
+      }
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      margin-right: 10px;
+      color: var(--color-one-accent);
+    }
+
+    &-name {
+      font-size: 13px;
+      line-height: 16px;
+      white-space: nowrap;
+      transition: color $transition-duration $transition-timing-function;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.business {
+  min-height: calc(100vh - 87px);
+  padding: 140px 0;
+  background-image: url('@img/business-bg@2x.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: $mobileS__max) {
+    min-height: auto;
+    padding: 140px 0 70px;
+  }
+
+  &__title {
+    max-width: 780px;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-black);
+
+    @media screen and (max-width: $mobileS__max) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    .title--modified {
+      font-family: "Raleway", Arial, sans-serif;
+      font-weight: 800;
+    }
+  }
+
+  &__text {
+    max-width: 780px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-top: $space-big;
+
+    @media screen and (max-width: $mobileS__max) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: $space-small;
+    }
+  }
+
+  &__list {
+    max-width: 780px;
+    margin-top: 10px;
+    padding-left: 15px;
+
+    &-item {
+      font-size: 20px;
+      line-height: 24px;
+      padding-left: 11px;
+      color: var(--color-black);
+
+      @media screen and (max-width: $mobileS__max) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &::marker {
+        content: '-';
+      }
+
+      & + & {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 30px;
+    gap: 30px;
+    margin-top: $space-big;
+
+    @media screen and (max-width: $mobileS__max) {
+      grid-template-columns: max-content;
+      grid-gap: 16px;
+      gap: 16px;
+      margin-top: $space-small;
+    }
+  }
+}
